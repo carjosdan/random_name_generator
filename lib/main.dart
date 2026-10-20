@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'screens/random_name_generator_page.dart';
-
+import '../styles/app_styles.dart';
+import 'widgets/people_list.dart';
 void main() {
   runApp(const RandomNameGenerator());
 }
@@ -10,12 +10,18 @@ class RandomNameGenerator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
-      title: 'Random Name Generator',
-      theme: ThemeData(
-        fontFamily: 'Lexend',
+      title: 'Generador de nombres aleatorios',
+      theme: AppStyles.myTheme,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: AppStyles.primary,
+          foregroundColor: AppStyles.secondary,
+          title: const Text('Generador de nombres aleatorios'),
+        ),
+        body: PeopleList(),
       ),
-      home: const RandomNameGeneratorPage(),
     );
   }
 }
