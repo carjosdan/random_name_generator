@@ -48,7 +48,7 @@ class _PeopleListState extends State<PeopleList> {
           );
         },
         separatorBuilder: (context, index) => AppStyles.divider,
-        itemCount: 1000,
+        itemCount: _suggestions.length,
       );
   }
 }
